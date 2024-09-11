@@ -108,3 +108,14 @@
     width: calc(1536px + (100% - 1536px) / 2);
   }
 }
+.custom-splide-pagination {
+  .splide__pagination__page.is-active {
+    background: #3b82f6 !important; /* blue-500 */
+  }
+
+  .splide__pagination__page {
+    bottom: -50px !important;
+    height: 12px;
+    width: 12px;
+  }
+}

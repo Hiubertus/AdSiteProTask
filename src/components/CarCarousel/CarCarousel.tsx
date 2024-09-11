@@ -1,6 +1,6 @@
 "use client";
 
-import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components";
 import Image from "next/image";
 // @ts-ignore
@@ -62,7 +62,11 @@ export const CarCarousel: React.FC = () => {
 
         <div className="mt-8">
           <Splide
+
             options={{
+                classes: {
+                    pagination: 'splide__pagination custom-splide-pagination'
+                },
               perPage: 2.3,
               perMove: 1,
               gap: "2rem",
@@ -99,17 +103,6 @@ export const CarCarousel: React.FC = () => {
             ))}
           </Splide>
         </div>
-        <style jsx global>{`
-          .splide__pagination__page.is-active {
-            background: #3b82f6 !important; /* blue-500 */
-          }
-
-          .splide__pagination__page {
-            bottom: -50px !important;
-            height: 12px;
-            width: 12px;
-          }
-        `}</style>
       </div>
     </section>
   );
